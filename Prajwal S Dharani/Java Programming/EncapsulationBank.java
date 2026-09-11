@@ -68,6 +68,8 @@ public class EncapsulationBank
                 default:
                     System.out.println("Invalid choice");
             }
-        } while(choice != 4);
+        } 
+        while(choice != 4);
+        sc.close();
     }
 }
