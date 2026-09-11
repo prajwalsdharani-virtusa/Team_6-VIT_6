@@ -1,34 +1,34 @@
 import java.util.*;
 class BankAccount
 {
-    private double balance;
-    public void deposit(double amount)
+    private double bal;
+    public void dep(double amt)
     {
-        if(amount > 0)
+        if(amt > 0)
         {
-            balance = balance + amount;
-            System.out.println("Amount deposited: " + amount);
+            bal = bal + amt;
+            System.out.println("Amount deposited: " + amt);
         }
         else
         {
             System.out.println("Invalid deposit amount");
         }
     }
-    public void withdraw(double amount)
+    public void withdraw(double amt)
     {
-        if(amount > 0 && amount <= balance)
+        if(amt > 0 && amt <= bal)
         {
-            balance = balance - amount;
-            System.out.println("Amount withdrawn: " + amount);
+            bal = bal - amt;
+            System.out.println("Amount withdrawn: " + amt);
         }
         else
         {
             System.out.println("Insufficient balance or invalid amount");
         }
     }
-    public double getBalance()
+    public double getBal()
     {
-        return balance;
+        return bal;
     }
 }
 public class EncapsulationBank
@@ -52,7 +52,7 @@ public class EncapsulationBank
                 case 1:
                     System.out.print("Enter deposit amount: ");
                     double deposit = sc.nextDouble();
-                    account.deposit(deposit);
+                    account.dep(deposit);
                     break;
                 case 2:
                     System.out.print("Enter withdrawal amount: ");
@@ -60,7 +60,7 @@ public class EncapsulationBank
                     account.withdraw(withdraw);
                     break;
                 case 3:
-                    System.out.println("Current Balance: " + account.getBalance());
+                    System.out.println("Current Balance: " + account.getBal());
                     break;
                 case 4:
                     System.out.println("Thank you!");
