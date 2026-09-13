@@ -4,14 +4,11 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 rl.question("Enter a string: ", function(str) {
-
-    let reversed = str.split("").reverse().join("");
-
-    if (str === reversed) {
+    let rev = str.split("").reverse().join("");
+    if (str === rev) {
         console.log("The string is a palindrome.");
     } else {
         console.log("The string is not a palindrome.");
     }
-
     rl.close();
 });

@@ -3,16 +3,12 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-rl.question("Enter a binary number: ", (binary: string) => {
-
-    let decimal: number = 0;
-
-    for (let i = 0; i < binary.length; i++) {
-        decimal = decimal * 2 + Number(binary[i]);
+rl.question("Enter a binary number: ", (bin: string) => {
+    let dec: number = 0;
+    for (let i = 0; i < bin.length; i++) {
+        dec = dec * 2 + Number(bin[i]);
     }
-
-    console.log("Binary number:", binary);
-    console.log("Decimal number:", decimal);
-
+    console.log("Binary number:", bin);
+    console.log("Decimal number:", dec);
     rl.close();
 });

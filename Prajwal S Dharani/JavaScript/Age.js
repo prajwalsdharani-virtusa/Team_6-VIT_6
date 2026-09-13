@@ -4,12 +4,11 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 rl.question("Enter your date of birth (YYYY-MM-DD): ", function(dob) {
-
-    let birthDate = new Date(dob);
-    let today = new Date();
-    let age = today.getFullYear() - birthDate.getFullYear();
-    let month = today.getMonth() - birthDate.getMonth();
-    if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
+    let bd = new Date(dob);
+    let tdy = new Date();
+    let age = tdy.getFullYear() - bd.getFullYear();
+    let month = tdy.getMonth() - bd.getMonth();
+    if (month < 0 || (month === 0 && tdy.getDate() < bd.getDate())) {
         age--;
     }
     console.log("Your age is:", age);
